@@ -36,6 +36,7 @@ export class QueryHandler extends plugin {
         //await this.reply(segment.image(buff))
         let message = [url]
          message.push(segment.image(buff))
+         message.push('受服务器网络波动影响，如果无法加载出正确的图片，还请您重新发送或点开上面的链接进入网页查看')
         return this.reply(await common.makeForwardMsg(this.e, message))
     }
 }
